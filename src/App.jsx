@@ -9,7 +9,7 @@ import {
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import { GrDashboard } from "react-icons/gr"
-
+import ToDoForm from './components/ToDoForm'
 // Temporary Placeholder Pages
 // These will later be replaced
 // by your teammates' real pages
@@ -18,13 +18,14 @@ const Dashboard = () => {
   return <h1 className="text-3xl">Dashboard</h1>
 }
 
-const Tasks = () => {
-  return <h1 className="text-3xl">Tasks</h1>
+const AddTask = () => {
+  return <h1 className="text-3xl">ToDoForm</h1>
+
 }
 
-const AddTask = () => {
-  return <h1 className="text-3xl">Add Task</h1>
-}
+
+
+
 
 const Calendar = () => {
   return <h1 className="text-3xl">Calendar</h1>
@@ -69,13 +70,14 @@ function App() {
               {/* Tasks Route */}
               <Route
                 path="/tasks"
-                element={<Tasks />}
+                element={<ToDoList />}
               />
+              
 
               {/* Add Task Route */}
               <Route
                 path="/add-task"
-                element={<AddTask />}
+                element={<ToDoForm />}
               />
 
               {/* Calendar Route */}
@@ -108,6 +110,10 @@ function App() {
             <div className="mt-auto">
             <Footer />
             </div>
+            <div>
+              <ToDoForm/>
+            </div>
+            
 
           </div>
         </div>
